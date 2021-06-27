@@ -346,8 +346,10 @@ const ReactPageScroller = ({
         ref={pageContainer}
         onWheel={wheelScroll}
         style={{
-          height: "100%",
-          width: "100%",
+          height: "-webkit-fill-available",
+          maxHeight: "100vh",
+          width: "100vw",
+          overflow: "hidden",
           transition: `transform ${animationTimer}ms ${transitionTimingFunction}`,
           outline: "none",
         }}
